@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 215 25% 97%;
+    --foreground: 220 40% 12%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 40% 12%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 40% 12%;
+
+    --primary: 220 45% 14%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 215 20% 88%;
+    --secondary-foreground: 220 40% 12%;
+
+    --muted: 215 20% 90%;
+    --muted-foreground: 220 15% 45%;
+
+    --accent: 270 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 215 20% 88%;
+    --input: 215 20% 88%;
+    --ring: 270 80% 60%;
+
+    --radius: 0.75rem;
+
+    /* Brand gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(270 80% 60%) 0%, hsl(185 85% 55%) 100%);
+    --gradient-hero: linear-gradient(180deg, hsl(220 45% 14%) 0%, hsl(220 50% 8%) 100%);
+    --gradient-accent: linear-gradient(90deg, hsl(270 80% 60% / 0.1) 0%, hsl(185 85% 55% / 0.1) 100%);
+    
+    /* Cyan accent */
+    --cyan: 185 85% 55%;
+    --cyan-foreground: 220 40% 12%;
+
+    /* Electric violet */
+    --violet: 270 80% 60%;
+    --violet-foreground: 0 0% 100%;
+
+    /* Animation */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+
+  .dark {
+    --background: 220 45% 6%;
+    --foreground: 215 20% 95%;
+
+    --card: 220 40% 10%;
+    --card-foreground: 215 20% 95%;
+
+    --popover: 220 40% 10%;
+    --popover-foreground: 215 20% 95%;
+
+    --primary: 215 20% 95%;
+    --primary-foreground: 220 45% 14%;
+
+    --secondary: 220 30% 18%;
+    --secondary-foreground: 215 20% 95%;
+
+    --muted: 220 30% 18%;
+    --muted-foreground: 215 15% 60%;
+
+    --accent: 270 80% 60%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 220 30% 18%;
+    --input: 220 30% 18%;
+    --ring: 270 80% 60%;
+
+    --cyan: 185 85% 55%;
+    --cyan-foreground: 220 40% 12%;
+
+    --violet: 270 80% 60%;
+    --violet-foreground: 0 0% 100%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
